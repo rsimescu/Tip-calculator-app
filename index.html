@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="title"><img src="images/logo.svg" width="100%" /></div>
+      <div class="card">
+        <div class="left">
+          <div class="topInputContainer">
+            <div class="labels">
+              <label for="topInput">Bill</label>
+              <label id="errorMessageTop" class="error visible" for="topInput">Can't be zero</label>
+            </div>
+            <div class="topInput">
+              <img src="images/icon-dollar.svg" /><input
+                id="topInput"
+                type="number"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="buttonsContainer">
+            <div class="buttonLabel">Select Tip %</div>
+            <div class="buttons">
+              <button id="p5">5%</button>
+              <button id="p10">10%</button>
+              <button id="p15">15%</button>
+              <button id="p25">25%</button>
+              <button id="p50">50%</button>
+              <div class="customInput">
+                <input id="customInput" type="number" placeholder="CUSTOM" />
+              </div>
+            </div>
+          </div>
+          <div class="bottomInputContainer">
+            <div class="labels">
+              <label for="bottomInput">Number of People</label>
+              <label id="errorMessageBottom" class="error visible" for="bottomInput">Can't be zero</label>
+            </div>
+            <div class="bottomInput">
+              <img src="images/icon-person.svg" /><input
+                id="peopleInput"
+                type="number"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="values">
+            <div class="tipContainer">
+              <div class="rightText">
+                <span class="rightWhiteText">Tip Amount</span>
+                <span class="person"> / person</span>
+              </div>
+              <span id="tipValue">$0.00</span>
+            </div>
+            <div class="totalContainer">
+              <div class="rightText">
+                <span class="rightWhiteText">Total</span>
+                <span class="person"> / person</span>
+              </div>
+              <span id="totalValue">$0.00</span>
+            </div>
+          </div>
+          <button id="reset">RESET</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
